@@ -17,3 +17,5 @@ jobs: # 工作流程
         BRANCH: gh-pages # 发布的分支
         FOLDER: build # 构建成果所在目录
         BUILD_SCRIPT: npm install && npm run build # 构建命令脚本
+      run: |
+        echo $ACCESS_TOKEN $BRANCH $FOLDER $BUILD_SCRIPT
