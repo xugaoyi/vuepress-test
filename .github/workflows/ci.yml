@@ -1,0 +1,20 @@
+# 整个流程在master分支发生push事件时触发。
+name: GitHub Actions Build and Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest #只有一个job，运行在虚拟机环境ubuntu-latest。
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master #第一步是获取源码，使用的 action 是actions/checkout
+
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@master #第二步是构建和部署，使用的 action 是JamesIves/github-pages-deploy-action。
+      env: # 需要设置这4个变量
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
+        BRANCH: gh-pages # 发布的分支
+        FOLDER: build # 构建成果所在目录
+        BUILD_SCRIPT: npm install && npm run build # 构建命令脚本

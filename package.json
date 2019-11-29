@@ -1,6 +1,12 @@
 {
   "scripts": {
-    "dev":"vuepress dev docs",
-    "build":"vuepress build docs"
-  }
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.2.0",
+    "@vuepress/plugin-medium-zoom": "^1.2.0"
+  },
+  "homepage": "https://xugaoyi.github.io/vuepress-test"
 }

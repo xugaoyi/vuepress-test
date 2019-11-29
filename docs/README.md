@@ -1,4 +1,56 @@
+---
+home: true
+heroImage: /assets/img/logo.jpg
+heroText: Hello world 主标题
+tagline: 我是副标题
+actionText: 快速上手 → # 激活按钮文本
+actionLink: '/foo/1' # 激活按钮链接
+features: # 产品特点介绍
+- title: 简洁至上
+  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
+- title: Vue驱动
+  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
+- title: 高性能
+  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+footer: MIT Licensed | Copyright © 2018-present Evan You # 底部文本
+---
+
+
+
+
+
+
+
+
+
+## 首页
+
+默认的主题提供了一个首页（Homepage）的布局 (用于 [这个网站的主页](https://vuepress.vuejs.org/zh/))。想要使用它，需要在你的根级 `README.md` 的 [YAML front matter](https://vuepress.vuejs.org/zh/guide/markdown.html#front-matter) 指定 `home: true`。以下是一个如何使用的例子：
+
+```yaml
+---
+home: true
+heroImage: /hero.png
+heroText: Hero 标题
+tagline: Hero 副标题
+actionText: 快速上手 →
+actionLink: '/#首页'
+features:
+- title: 简洁至上
+  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
+- title: Vue驱动
+  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
+- title: 高性能
+  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+footer: MIT Licensed | Copyright © 2018-present Evan You
+---
+```
+
+任何 `YAML front matter` 之后额外的内容将会以普通的 markdown 被渲染，并插入到 `features` 的后面。
+
 # hello world
+
+
 
 ### 链接跳转
 
