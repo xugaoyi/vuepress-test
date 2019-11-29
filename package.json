@@ -1,4 +1,5 @@
 {
+  "homepage": "https://xugaoyi.github.io/vuepress-test/",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
@@ -7,6 +8,5 @@
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.2.0",
     "@vuepress/plugin-medium-zoom": "^1.2.0"
-  },
-  "homepage": "https://xugaoyi.github.io/vuepress-test"
+  }
 }
