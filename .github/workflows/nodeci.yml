@@ -15,15 +15,13 @@ jobs: # 工作流
         node-version: [10.x]
 
     steps: # 步骤
-      - name: Checkout # 步骤一：获取源码
       - uses: actions/checkout@v1 # 使用的动作是actions/checkout@v1
-      
-      - name: Use Node.js ${{ matrix.node-version }} # 步骤二：使用nodejs
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
           
-      - name: Build and Deploy # 步骤三： 构建和部署
+      - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env: # 设置变量
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
